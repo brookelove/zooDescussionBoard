@@ -21,6 +21,7 @@ const animalSchema = new Schema({
   diet: [
     {
       type: String,
+      trim: true,
     },
   ],
   reproduction: {
