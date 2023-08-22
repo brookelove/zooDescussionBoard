@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+const { Schema, model } = require("mongoose");
 
 const animalSchema = new Schema({
   name: {
@@ -16,7 +16,7 @@ const animalSchema = new Schema({
     type: Schema.Types.ObjectId,
   },
   weight: {
-    type: Integer,
+    type: Number,
   },
   diet: [
     {

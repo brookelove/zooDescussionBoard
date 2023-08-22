@@ -1,8 +1,7 @@
-import { Schema, model } from "mongoose";
 const dateFormat = require("../utils/dateFormat");
-
+const { Schema, model } = require("mongoose");
 const discussionSchema = new Schema({
-  userName: {
+  username: {
     type: Schema.Types.ObjectId,
     ref: "Keeper",
   },
@@ -42,4 +41,4 @@ const discussionSchema = new Schema({
 });
 
 const Discussion = model("Discussion", discussionSchema);
-export default Discussion;
+module.export = Discussion;

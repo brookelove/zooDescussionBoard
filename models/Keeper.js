@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 
 const keeperSchema = new Schema({
@@ -51,4 +51,4 @@ keeperSchema.virtual("friendCount").get(function () {
 
 const Keeper = model("User", keeperSchema);
 
-export default Keeper;
+module.exports = Keeper;

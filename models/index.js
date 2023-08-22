@@ -1,7 +1,7 @@
-import Animal from "./Animal";
-import Discussion from "./Discussion";
-import Keeper from "./Keeper";
-import Tag from "./Tags";
-import Zoo from "./Zoo";
+const Animal = require("./Animal");
+const Discussion = require("./Discussion");
+const Keeper = require("./Keeper");
+const Tag = require("./Tags");
+const Zoo = require("./Zoo");
 
-export default { Animal, Discussion, Keeper, Tag, Zoo };
+module.exports = { Animal, Discussion, Keeper, Tag, Zoo };
