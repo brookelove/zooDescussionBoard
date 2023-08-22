@@ -25,6 +25,12 @@ const keeperSchema = new Schema({
       ref: "Thought",
     },
   ],
+  friends: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+    },
+  ],
 });
 keeperSchema.pre("save", async function (next) {
   if (this.isNew || this.isModified("password")) {
@@ -38,6 +44,10 @@ keeperSchema.pre("save", async function (next) {
 keeperSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
+
+keeperSchema.virtual("friendCount").get(function () {
+  return this.friends.length;
+});
 
 const Keeper = model("User", keeperSchema);
 

@@ -12,7 +12,7 @@ const animalSchema = new Schema({
   family: {
     type: String,
   },
-  zoo: {
+  zooName: {
     type: Schema.Types.ObjectId,
   },
   weight: {
@@ -30,11 +30,13 @@ const animalSchema = new Schema({
   offspring: [
     {
       type: Schema.Types.ObjectId,
+      ref: "Animal",
     },
   ],
   partner: [
     {
       type: Schema.Types.ObjectId,
+      ref: "Animal",
     },
   ],
   medicalNeeds: [
