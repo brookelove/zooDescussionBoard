@@ -15,12 +15,12 @@ type Animal{
     reproduction: Boolean
     partner: Animal
     offspring: [Animal]
-    medicalNeeds: [String]
+    medicalNeeds: [MedicalNeeds]
+    discussions: [Discussion]
 }
 
 type Discussion{
     _id: ID
-    username: Keeper
     createdAt: String
     media: String
     comments: [String]
@@ -33,6 +33,12 @@ type Keeper{
     email: String
     password: String
     friends: [Keeper]
+}
+
+type MedicalNeeds {
+    _id: ID!
+    type: String!
+    details: String
 }
 
 type Tag{
@@ -58,6 +64,8 @@ type Query {
         me: Keeper
         discussions(username: String): [Discussion!]!
         discussion(discussionId: ID!): Discussion
+        medicalNeeds: [MedicalNeeds!]!
+        medicalNeed(_id: ID!): MedicalNeeds
         tags: [Tag!]!
         tag(name: String!): Tag
         zoos: [Zoo!]!
@@ -74,6 +82,9 @@ type Mutation {
         addComment(discussionId: ID!, commentText: String!): Discussion
         removeDiscussion(discussionId: ID!): Discussion
         removeComment(discussionId: ID!, commentId: ID!): Discussion
+        addMedicalNeed(type: String!, details: String): MedicalNeeds
+        updateMedicalNeed(_id: ID!, type: String!, details: String): MedicalNeeds
+        deleteMedicalNeed(_id: ID!): MedicalNeeds
         addTag(name: String!): Tag
         addZoo(name: String!): Zoo
         removeZoo(zooId: ID!): Zoo

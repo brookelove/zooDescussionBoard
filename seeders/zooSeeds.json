@@ -1,0 +1,28 @@
+[
+    {
+      "name": "Zoo 1",
+      "location": "Location 1",
+      "keepers": []
+    },
+    {
+      "name": "Zoo 2",
+      "location": "Location 2",
+      "keepers": []
+    },
+    {
+      "name": "Zoo 3",
+      "location": "Location 3",
+      "keepers": []
+    },
+    {
+      "name": "Zoo 4",
+      "location": "Location 4",
+      "keepers": []
+    },
+    {
+      "name": "Zoo 5",
+      "location": "Location 5",
+      "keepers": []
+    }
+]
+  

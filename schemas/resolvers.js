@@ -1,4 +1,11 @@
-const { Keeper, Discussion, Animal, Tag, Zoo } = require("../models");
+const {
+  Keeper,
+  Discussion,
+  Animal,
+  Tag,
+  Zoo,
+  MedicalNeeds,
+} = require("../models");
 const { signToken, AuthenticationError } = require("../utils/auth");
 const resolvers = {
   Query: {
@@ -34,6 +41,14 @@ const resolvers = {
       return Discussion.findOne({ _id: discussionId });
     },
 
+    //Medical Needs =======
+    medicalNeeds: async () => {
+      return MedicalNeed.find();
+    },
+    medicalNeed: async (_, { _id }) => {
+      return MedicalNeed.findById(_id);
+    },
+
     //Tag
     tags: async () => {
       return Tag.find().populate("discussions");
@@ -52,35 +67,44 @@ const resolvers = {
   },
   Mutation: {
     //Animal
-    addAnimal: async (
-      parent,
-      {
-        name,
-        species,
-        family,
-        zoo,
-        weight,
-        diet,
-        reproduction,
-        offspring,
-        partner,
-        medicalNeeds,
+    // addAnimal: async (
+    //   parent,
+    //   {
+    //     name,
+    //     species,
+    //     family,
+    //     zoo,
+    //     weight,
+    //     diet,
+    //     reproduction,
+    //     offspring,
+    //     partner,
+    //     medicalNeeds,
+    //   }
+    // ) => {
+    //   const animal = await Animal.create({
+    //     name,
+    //     species,
+    //     family,
+    //     zoo,
+    //     weight,
+    //     diet,
+    //     reproduction,
+    //     offspring,
+    //     partner,
+    //     medicalNeeds,
+    //   });
+    //   const token = signToken(animal);
+    //   return { token, animal };
+    // },
+    addAnimal: async (_, args) => {
+      try {
+        const animal = await Animal.create(args);
+        console.log("Created Animal: ", animal);
+        return animal; // Make sure you return the created animal
+      } catch (error) {
+        throw new Error("Unable to create the animal.");
       }
-    ) => {
-      const animal = await Animal.create({
-        name,
-        species,
-        family,
-        zoo,
-        weight,
-        diet,
-        reproduction,
-        offspring,
-        partner,
-        medicalNeeds,
-      });
-      const token = signToken(animal);
-      return { token, animal };
     },
     updateAnimal: async (
       parent,
@@ -152,6 +176,26 @@ const resolvers = {
 
       return { token, keeper };
     },
+
+    //Medical Needs
+    addMedicalNeed: async (_, { type, details }) => {
+      const medicalNeed = new MedicalNeeds({ type, details });
+      await medicalNeed.save();
+      return medicalNeed;
+    },
+    updateMedicalNeed: async (_, { _id, type, details }) => {
+      const updatedMedicalNeed = await MedicalNeeds.findByIdAndUpdate(
+        _id,
+        { type, details },
+        { new: true }
+      );
+      return updatedMedicalNeed;
+    },
+    deleteMedicalNeed: async (_, { _id }) => {
+      const deletedMedicalNeed = await MedicalNeeds.findByIdAndDelete(_id);
+      return deletedMedicalNeed;
+    },
+
     // Discussion Mutation ====
     addDiscussion: async (parent, { discussionText }, context) => {
       if (context.keeper) {

@@ -1,0 +1,92 @@
+[
+    {
+      "name": "Tigger",
+      "species": "Tiger",
+      "family": "Felidae",
+      "weight": 200,
+      "diet": ["Meat"],
+      "reproduction": true,
+      "medicalNeeds": [ ]
+    },
+    {
+      "name": "Simba",
+      "species": "Lion",
+      "family": "Felidae",
+      "weight": 180,
+      "diet": ["Meat"],
+      "reproduction": true,
+      "medicalNeeds": []
+    },
+    {
+      "name": "Baloo",
+      "species": "Bear",
+      "family": "Ursidae",
+      "weight": 400,
+      "diet": ["Fish", "Berries"],
+      "reproduction": false,
+      "medicalNeeds": []
+    },
+    {
+      "name": "Rex",
+      "species": "Tyrannosaurus",
+      "family": "Dinosaur",
+      "weight": 9000,
+      "diet": ["Dinosaurs"],
+      "reproduction": false,
+      "medicalNeeds": []
+    },
+    {
+      "name": "Fluffy",
+      "species": "Cat",
+      "family": "Felidae",
+      "weight": 10,
+      "diet": ["Cat Food"],
+      "reproduction": true,
+      "medicalNeeds": []
+    },
+    {
+      "name": "Buddy",
+      "species": "Dog",
+      "family": "Canidae",
+      "weight": 25,
+      "diet": ["Dog Food"],
+      "reproduction": true,
+      "medicalNeeds": []
+    },
+    {
+      "name": "Sasha",
+      "species": "Siberian Husky",
+      "family": "Canidae",
+      "weight": 30,
+      "diet": ["Dog Food"],
+      "reproduction": true,
+      "medicalNeeds": []
+    },
+    {
+      "name": "Polly",
+      "species": "Parrot",
+      "family": "Psittacidae",
+      "weight": 0.5,
+      "diet": ["Seeds", "Fruits"],
+      "reproduction": true,
+      "medicalNeeds": []
+    },
+    {
+      "name": "Nemo",
+      "species": "Clownfish",
+      "family": "Pomacentridae",
+      "weight": 0.1,
+      "diet": ["Algae"],
+      "reproduction": true,
+      "medicalNeeds": []
+    },
+    {
+      "name": "Moby",
+      "species": "Humpback Whale",
+      "family": "Balaenopteridae",
+      "weight": 25000,
+      "diet": ["Plankton"],
+      "reproduction": true,
+      "medicalNeeds": []
+    }
+  ]

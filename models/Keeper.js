@@ -22,7 +22,7 @@ const keeperSchema = new Schema({
   discussions: [
     {
       type: Schema.Types.ObjectId,
-      ref: "Thought",
+      ref: "Discussion",
     },
   ],
   friends: [
