@@ -1,8 +1,37 @@
-{
-    "name": "Test Keeper",
-    "email": "test@example.com",
-    "password": "testpassword",
-    "discussions": [],
-    "friends": []
-  }
-  
+[
+    {
+      "name": "Keeper 1",
+      "email": "keeper1@example.com",
+      "password": "password1",
+      "discussions": [],
+      "friends": []
+    },
+    {
+      "name": "Keeper 2",
+      "email": "keeper2@example.com",
+      "password": "password2",
+      "discussions": [],
+      "friends": []
+    },
+    {
+      "name": "Keeper 3",
+      "email": "keeper3@example.com",
+      "password": "password3",
+      "discussions": [],
+      "friends": []
+    },
+    {
+      "name": "Keeper 4",
+      "email": "keeper4@example.com",
+      "password": "password4",
+      "discussions": [],
+      "friends": []
+    },
+    {
+      "name": "Keeper 5",
+      "email": "keeper5@example.com",
+      "password": "password5",
+      "discussions": [],
+      "friends": []
+    }
+] 

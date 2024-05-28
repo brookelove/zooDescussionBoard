@@ -1,10 +1,10 @@
 const dateFormat = require("../utils/dateFormat");
 const { Schema, model } = require("mongoose");
-const discussionSchema = new Schema({
-  // username: {
-  //   type: Schema.Types.ObjectId,
-  //   ref: "Keeper",
-  // },
+const directMessageSchema = new Schema({
+  username: {
+    type: Schema.Types.ObjectId,
+    ref: "Keeper",
+  },
   createdAt: {
     type: Date,
     default: Date.now,
@@ -40,5 +40,5 @@ const discussionSchema = new Schema({
   ],
 });
 
-const Discussion = model("Discussion", discussionSchema);
-module.exports = Discussion;
+const DirectMessage = model("DirectMessage", directMessageSchema);
+module.exports = DirectMessage;

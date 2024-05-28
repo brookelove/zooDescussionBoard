@@ -6,20 +6,40 @@ const zooSchema = new Schema({
     required: true,
     trim: true,
   },
+  established_date: {
+    type: Date,
+    required: true,
+  },
   location: {
     type: String,
     required: true,
   },
-  keepers: [
+  staff: [
     {
       type: Schema.Types.ObjectId,
-      ref: "Keeper",
+      ref: "User",
+    },
+  ],
+  research_projects: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Research",
     },
   ],
   animals: [
     {
       type: Schema.Types.ObjectId,
-      ref: "animal",
+      ref: "Animal",
+    },
+  ],
+  habitats: [
+    {
+      type: String,
+    },
+  ],
+  awards: [
+    {
+      type: String,
     },
   ],
 });

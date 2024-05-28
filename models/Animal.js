@@ -5,10 +5,29 @@ const animalSchema = new Schema(
     name: {
       type: String,
     },
+    photo: {
+      type: String,
+    },
+    age: {
+      type: String,
+    },
+    parents: [
+      {
+        type: String,
+      },
+    ],
+    research_projects: [
+      {
+        type: String,
+      },
+    ],
     species: {
       type: String,
     },
     family: {
+      type: String,
+    },
+    captivity: {
       type: String,
     },
     zooName: {
@@ -45,7 +64,7 @@ const animalSchema = new Schema(
         ref: "MedicalNeeds",
       },
     ],
-    discussions: [
+    notes: [
       {
         type: Schema.Types.ObjectId,
         ref: "Discussion",

@@ -1,11 +1,22 @@
 const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 
-const keeperSchema = new Schema({
+const userSchema = new Schema({
   name: {
     type: String,
     required: true,
     trim: true,
+  },
+  personal_id: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  photo: {
+    type: String,
+  },
+  role: {
+    type: String,
   },
   email: {
     type: String,
@@ -14,6 +25,20 @@ const keeperSchema = new Schema({
     unique: true,
     match: [/.+@.+\..+/, "Must match an email address!"],
   },
+  phone_number: {
+    type: String,
+    required: true,
+  },
+  zooName: {
+    type: Schema.Types.ObjectId,
+    ref: "Zoo",
+  },
+  research_projects: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Research",
+    },
+  ],
   password: {
     type: String,
     required: true,
@@ -32,7 +57,7 @@ const keeperSchema = new Schema({
     },
   ],
 });
-keeperSchema.pre("save", async function (next) {
+userSchema.pre("save", async function (next) {
   if (this.isNew || this.isModified("password")) {
     const saltRounds = 10;
     this.password = await bcrypt.hash(this.password, saltRounds);
@@ -41,14 +66,14 @@ keeperSchema.pre("save", async function (next) {
   next();
 });
 
-keeperSchema.methods.isCorrectPassword = async function (password) {
+userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 
-keeperSchema.virtual("friendCount").get(function () {
+userSchema.virtual("friendCount").get(function () {
   return this.friends.length;
 });
 
-const Keeper = model("User", keeperSchema);
+const User = model("User", userSchema);
 
-module.exports = Keeper;
+module.exports = User;

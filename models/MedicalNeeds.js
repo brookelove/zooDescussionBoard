@@ -6,6 +6,11 @@ const medicalNeedSchema = new Schema({
     required: true,
   },
   details: String,
+  needsMedication: {
+    type: Boolean,
+    required: true,
+  },
+  medication: [{ type: String }],
 });
 
 const MedicalNeeds = model("MedicalNeed", medicalNeedSchema);
