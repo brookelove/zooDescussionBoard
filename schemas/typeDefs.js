@@ -9,25 +9,41 @@ type Animal{
     name: String
     species: String
     family: String
+    parents:[Animal]
+    research_projects:[Research]
     zooName: Zoo
+    captivity: String
     weight: Float
     diet: [String]
     reproduction: Boolean
-    partner: Animal
+    partner: [Animal]
     offspring: [Animal]
     medicalNeeds: [MedicalNeeds]
-    discussions: [Discussion]
+    notes: [Discussion]
+    tags:[Tags]
 }
 
-type Discussion{
+type Notes{
     _id: ID
-    createdAt: String
-    media: String
+    username:User
+    animal:Animal
+    createdAt: Date
+    note: String
     comments: [String]
-    tags: [Tag]
+    tags: [Tags]
+}
+type Research {
+    _id: ID
+    name:User
+    beginning_date:Date
+    ending_date:Date
+    authors: [User]
+    note: String
+    animals: [Animal]
+    awards: [String]
 }
 
-type Keeper{
+type User{
     _id: ID
     name: String
     email: String
@@ -41,12 +57,12 @@ type MedicalNeeds {
     details: String
 }
 
-type Tag{
+type Tags {
     _id: ID
     tagName: String
     backgroundColor: String
     color: String
-    createdAt: String
+    createdAt: Date
 }
 
 type Zoo{
@@ -76,16 +92,16 @@ type Mutation {
         addAnimal(name: String!): Animal
         updateAnimal(name: String!): Animal
         deleteAnimal(animalId: ID!): Animal
-        addKeeper(name: String!): Keeper
-        login(email: String!, password: String!): Keeper
-        addDiscussion(discussionText: String!): Discussion
-        addComment(discussionId: ID!, commentText: String!): Discussion
-        removeDiscussion(discussionId: ID!): Discussion
-        removeComment(discussionId: ID!, commentId: ID!): Discussion
+        addUser(name: String!): User
+        login(email: String!, password: String!): User
+        addNotes(discussionText: String!): Notes
+        addComment(discussionId: ID!, commentText: String!): Notes
+        removeDiscussion(discussionId: ID!): Notes
+        removeComment(discussionId: ID!, commentId: ID!): Notes
         addMedicalNeed(type: String!, details: String): MedicalNeeds
         updateMedicalNeed(_id: ID!, type: String!, details: String): MedicalNeeds
         deleteMedicalNeed(_id: ID!): MedicalNeeds
-        addTag(name: String!): Tag
+        addTag(name: String!): Tags
         addZoo(name: String!): Zoo
         removeZoo(zooId: ID!): Zoo
 }

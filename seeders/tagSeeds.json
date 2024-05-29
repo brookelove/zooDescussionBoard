@@ -1,0 +1,63 @@
+[
+    {
+      "tagName": "Mammals",
+      "backgroundColor": "#FFA500",
+      "color": "#000000",
+      "createdAt": "2022-01-01T00:00:00Z"
+    },
+    {
+      "tagName": "Birds",
+      "backgroundColor": "#87CEEB",
+      "color": "#000000",
+      "createdAt": "2022-02-01T00:00:00Z"
+    },
+    {
+      "tagName": "Reptiles",
+      "backgroundColor": "#228B22",
+      "color": "#FFFFFF",
+      "createdAt": "2022-03-01T00:00:00Z"
+    },
+    {
+      "tagName": "Amphibians",
+      "backgroundColor": "#8A2BE2",
+      "color": "#FFFFFF",
+      "createdAt": "2022-04-01T00:00:00Z"
+    },
+    {
+      "tagName": "Fish",
+      "backgroundColor": "#1E90FF",
+      "color": "#FFFFFF",
+      "createdAt": "2022-05-01T00:00:00Z"
+    },
+    {
+      "tagName": "Invertebrates",
+      "backgroundColor": "#FFD700",
+      "color": "#000000",
+      "createdAt": "2022-06-01T00:00:00Z"
+    },
+    {
+      "tagName": "Endangered",
+      "backgroundColor": "#FF4500",
+      "color": "#FFFFFF",
+      "createdAt": "2022-07-01T00:00:00Z"
+    },
+    {
+      "tagName": "Nocturnal",
+      "backgroundColor": "#4B0082",
+      "color": "#FFFFFF",
+      "createdAt": "2022-08-01T00:00:00Z"
+    },
+    {
+      "tagName": "Herbivores",
+      "backgroundColor": "#32CD32",
+      "color": "#000000",
+      "createdAt": "2022-09-01T00:00:00Z"
+    },
+    {
+      "tagName": "Carnivores",
+      "backgroundColor": "#B22222",
+      "color": "#FFFFFF",
+      "createdAt": "2022-10-01T00:00:00Z"
+    }
+]
+  

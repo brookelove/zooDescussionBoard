@@ -13,7 +13,8 @@ const animalSchema = new Schema(
     },
     parents: [
       {
-        type: String,
+        type: Schema.Types.ObjectId,
+        ref: "Animal",
       },
     ],
     research_projects: [
@@ -67,7 +68,13 @@ const animalSchema = new Schema(
     notes: [
       {
         type: Schema.Types.ObjectId,
-        ref: "Discussion",
+        ref: "Notes",
+      },
+    ],
+    tags: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Tags",
       },
     ],
   },

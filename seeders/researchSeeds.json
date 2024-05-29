@@ -1,0 +1,83 @@
+[
+    {
+      "name": "Lion Behavior Study",
+      "beginning_date": "2022-01-01",
+      "ending_date": "2022-12-31",
+      "authors": ["60d21b4667d0d8992e610c111"],
+      "animals": ["60d21b4667d0d8992e610c82"],
+      "awards": ["Best Research 2022"]
+    },
+    {
+      "name": "Elephant Social Structure Study",
+      "beginning_date": "2021-05-01",
+      "ending_date": "2022-05-01",
+      "authors": ["60d21b4667d0d8992e610c112"],
+      "animals": ["60d21b4667d0d8992e610c85"],
+      "awards": ["Excellence in Research"]
+    },
+    {
+      "name": "Gorilla Family Dynamics Study",
+      "beginning_date": "2020-03-01",
+      "ending_date": "2021-03-01",
+      "authors": ["60d21b4667d0d8992e610c113"],
+      "animals": ["60d21b4667d0d8992e610c88"],
+      "awards": ["Innovative Research Award"]
+    },
+    {
+      "name": "Chimpanzee Cognitive Study",
+      "beginning_date": "2023-01-01",
+      "ending_date": "2023-12-31",
+      "authors": ["60d21b4667d0d8992e610c114"],
+      "animals": ["60d21b4667d0d8992e610c91"],
+      "awards": []
+    },
+    {
+      "name": "Tiger Habitat Study",
+      "beginning_date": "2022-06-01",
+      "ending_date": "2023-06-01",
+      "authors": ["60d21b4667d0d8992e610c115"],
+      "animals": ["60d21b4667d0d8992e610c94"],
+      "awards": ["Environmental Research Award"]
+    },
+    {
+      "name": "Penguin Climate Adaptation Study",
+      "beginning_date": "2021-09-01",
+      "ending_date": "2022-09-01",
+      "authors": ["60d21b4667d0d8992e610c116"],
+      "animals": ["60d21b4667d0d8992e610c97"],
+      "awards": []
+    },
+    {
+      "name": "Polar Bear Nutrition Study",
+      "beginning_date": "2020-12-01",
+      "ending_date": "2021-12-01",
+      "authors": ["60d21b4667d0d8992e610c117"],
+      "animals": ["60d21b4667d0d8992e610c100"],
+      "awards": ["Outstanding Research Award"]
+    },
+    {
+      "name": "Kangaroo Population Study",
+      "beginning_date": "2022-02-01",
+      "ending_date": "2023-02-01",
+      "authors": ["60d21b4667d0d8992e610c118"],
+      "animals": ["60d21b4667d0d8992e610c103"],
+      "awards": []
+    },
+    {
+      "name": "Giraffe Neck Length Study",
+      "beginning_date": "2023-03-01",
+      "ending_date": "2024-03-01",
+      "authors": ["60d21b4667d0d8992e610c119"],
+      "animals": ["60d21b4667d0d8992e610c106"],
+      "awards": ["Innovative Research Grant"]
+    },
+    {
+      "name": "Panda Breeding Study",
+      "beginning_date": "2021-07-01",
+      "ending_date": "2022-07-01",
+      "authors": ["60d21b4667d0d8992e610c120"],
+      "animals": ["60d21b4667d0d8992e610c109"],
+      "awards": ["Conservation Award"]
+    }
+  ]
+  

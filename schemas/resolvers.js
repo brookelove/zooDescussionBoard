@@ -1,11 +1,12 @@
 const {
-  Keeper,
-  Discussion,
   Animal,
-  Tag,
-  Zoo,
   MedicalNeeds,
+  Research,
+  Tags,
+  User,
+  Zoo,
 } = require("../models");
+const Notes = require("../models/Notes");
 const { signToken, AuthenticationError } = require("../utils/auth");
 const resolvers = {
   Query: {
@@ -18,51 +19,49 @@ const resolvers = {
     },
 
     // Keeper Query =========
-    keepers: async () => {
-      return Keeper.find().populate("discussions");
+    users: async () => {
+      return User.find().populate("discussions");
     },
-    keeper: async (parent, { username }) => {
-      return Keeper.findOne({ username }).populate("discussions");
+    user: async (parent, { username }) => {
+      return User.findOne({ username }).populate("discussions");
     },
     me: async (parent, args, context) => {
-      if (context.keeper) {
-        return Keeper.findOne({ _id: context.keeper._id }).populate(
-          "discussions"
-        );
+      if (context.user) {
+        return User.findOne({ _id: context.user._id }).populate("notes");
       }
       throw new AuthenticationError("Error message");
     },
     // Discussion Query ======
-    discussions: async (parent, { username }) => {
+    notes: async (parent, { username }) => {
       const params = username ? { username } : {};
-      return Discussion.find(params).sort({ createdAt: -1 });
+      return Notes.find(params).sort({ createdAt: -1 });
     },
-    discussion: async (parent, { discussionId }) => {
-      return Discussion.findOne({ _id: discussionId });
+    discussion: async (parent, { noteId }) => {
+      return Notes.findOne({ _id: noteId });
     },
 
     //Medical Needs =======
     medicalNeeds: async () => {
-      return MedicalNeed.find();
+      return MedicalNeeds.find();
     },
     medicalNeed: async (_, { _id }) => {
-      return MedicalNeed.findById(_id);
+      return MedicalNeeds.findById(_id);
     },
 
     //Tag
     tags: async () => {
-      return Tag.find().populate("discussions");
+      return Tags.find().populate("notes");
     },
     tag: async (parent, { name }) => {
-      return Tag.findOne({ name }).populate("discussions");
+      return Tags.findOne({ name }).populate("notes");
     },
 
     //Zoo
     zoos: async () => {
-      return Zoo.find().populate("discussions");
+      return Zoo.find().populate("animals");
     },
     zoo: async (parent, { name }) => {
-      return Zoo.findOne({ name }).populate("discussions");
+      return Zoo.findOne({ name }).populate("animals");
     },
   },
   Mutation: {
@@ -154,27 +153,27 @@ const resolvers = {
       throw new AuthenticationError("Error message");
     },
     // Keeper Mutation =========
-    addKeeper: async (parent, args) => {
-      const keeper = await Keeper.create(args);
-      const token = signToken(keeper);
-      return { token, keeper };
+    addUser: async (parent, args) => {
+      const user = await User.create(args);
+      const token = signToken(user);
+
+      return { token, user };
     },
     login: async (parent, { email, password }) => {
-      const keeper = await Keeper.findOne({ email });
+      const user = await User.findOne({ email });
 
-      if (!keeper) {
-        throw new AuthenticationError("Error message");
+      if (!user) {
+        throw AuthenticationError;
       }
 
-      const correctPw = await keeper.isCorrectPassword(password);
+      const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
-        throw new AuthenticationError("Error message");
+        throw AuthenticationError;
       }
 
-      const token = signToken(keeper);
-
-      return { token, keeper };
+      const token = signToken(user);
+      return { token, user };
     },
 
     //Medical Needs
@@ -197,15 +196,15 @@ const resolvers = {
     },
 
     // Discussion Mutation ====
-    addDiscussion: async (parent, { discussionText }, context) => {
-      if (context.keeper) {
-        const discussion = await Discussion.create({
+    addNote: async (parent, { discussionText }, context) => {
+      if (context.user) {
+        const discussion = await Notes.create({
           discussionText,
-          discussionAuthor: context.keeper.username,
+          discussionAuthor: context.user.username,
         });
 
         await User.findOneAndUpdate(
-          { _id: context.keeper._id },
+          { _id: context.user._id },
           { $addToSet: { discussions: discussion._id } }
         );
 
@@ -216,11 +215,11 @@ const resolvers = {
     },
     addComment: async (parent, { discussionId, commentText }, context) => {
       if (context.keeper) {
-        return Discussion.findOneAndUpdate(
+        return Notes.findOneAndUpdate(
           { _id: discussionId },
           {
             $addToSet: {
-              comments: { commentText, commentAuthor: context.keeper.username },
+              comments: { commentText, commentAuthor: context.user.username },
             },
           },
           {
@@ -231,15 +230,15 @@ const resolvers = {
       }
       throw new AuthenticationError("Error message");
     },
-    removeDiscussion: async (parent, { discussionId }, context) => {
-      if (context.keeper) {
-        const discussion = await Discussion.findOneAndDelete({
+    removeNotes: async (parent, { discussionId }, context) => {
+      if (context.user) {
+        const discussion = await Notes.findOneAndDelete({
           _id: discussionId,
           discussionAuthor: context.keeper.username,
         });
 
-        await Keeper.findOneAndUpdate(
-          { _id: context.keeper._id },
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
           { $pull: { discussions: discussion._id } }
         );
 
@@ -248,14 +247,14 @@ const resolvers = {
       throw new AuthenticationError("Error message");
     },
     removeComment: async (parent, { discussionId, commentId }, context) => {
-      if (context.keeper) {
-        return Discussion.findOneAndUpdate(
+      if (context.user) {
+        return Notes.findOneAndUpdate(
           { _id: discussionId },
           {
             $pull: {
               comments: {
                 _id: commentId,
-                commentAuthor: context.keeper.username,
+                commentAuthor: context.user.username,
               },
             },
           },
@@ -266,7 +265,7 @@ const resolvers = {
     },
     //Tag Mutations ========>
     addTag: async (parent, args) => {
-      const tag = await Tag.create(args);
+      const tag = await Tags.create(args);
       const token = signToken(tag);
       return { token, tag };
     },

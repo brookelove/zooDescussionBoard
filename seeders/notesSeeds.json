@@ -1,0 +1,142 @@
+[
+  {
+    "username": "60d21b4667d0d8992e610c81",
+    "animal": "60d21b4667d0d8992e610c82",
+    "createdAt": "2023-01-15T00:00:00Z",
+    "note": "Animal is adjusting well to the new environment.",
+    "comments": [
+      {
+        "commentText": "Great to hear!",
+        "commentAuthor": "Jane",
+        "createdAt": "2023-01-16T00:00:00Z"
+      }
+    ],
+    "tags": ["60d21b4667d0d8992e610c83"]
+  },
+  {
+    "username": "60d21b4667d0d8992e610c84",
+    "animal": "60d21b4667d0d8992e610c85",
+    "createdAt": "2023-02-10T00:00:00Z",
+    "note": "Ella is showing signs of stress.",
+    "comments": [
+      {
+        "commentText": "We need to monitor her closely.",
+        "commentAuthor": "John",
+        "createdAt": "2023-02-11T00:00:00Z"
+      }
+    ],
+    "tags": ["60d21b4667d0d8992e610c86"]
+  },
+  {
+    "username": "60d21b4667d0d8992e610c87",
+    "animal": "60d21b4667d0d8992e610c88",
+    "createdAt": "2023-03-05T00:00:00Z",
+    "note": "Max's allergy is under control.",
+    "comments": [
+      {
+        "commentText": "Continue with the same treatment.",
+        "commentAuthor": "Alice",
+        "createdAt": "2023-03-06T00:00:00Z"
+      }
+    ],
+    "tags": ["60d21b4667d0d8992e610c89"]
+  },
+  {
+    "username": "60d21b4667d0d8992e610c90",
+    "animal": "60d21b4667d0d8992e610c91",
+    "createdAt": "2023-04-12T00:00:00Z",
+    "note": "Charlie is very curious and active.",
+    "comments": [
+      {
+        "commentText": "He's a delight to observe.",
+        "commentAuthor": "Bob",
+        "createdAt": "2023-04-13T00:00:00Z"
+      }
+    ],
+    "tags": ["60d21b4667d0d8992e610c92"]
+  },
+  {
+    "username": "60d21b4667d0d8992e610c93",
+    "animal": "60d21b4667d0d8992e610c94",
+    "createdAt": "2023-05-20T00:00:00Z",
+    "note": "Bella needs a larger habitat.",
+    "comments": [
+      {
+        "commentText": "Let's start planning for it.",
+        "commentAuthor": "Sue",
+        "createdAt": "2023-05-21T00:00:00Z"
+      }
+    ],
+    "tags": ["60d21b4667d0d8992e610c95"]
+  },
+  {
+    "username": "60d21b4667d0d8992e610c96",
+    "animal": "60d21b4667d0d8992e610c97",
+    "createdAt": "2023-06-18T00:00:00Z",
+    "note": "Rex is showing signs of aggression.",
+    "comments": [
+      {
+        "commentText": "We need to ensure he is fed regularly.",
+        "commentAuthor": "Tom",
+        "createdAt": "2023-06-19T00:00:00Z"
+      }
+    ],
+    "tags": ["60d21b4667d0d8992e610c98"]
+  },
+  {
+    "username": "60d21b4667d0d8992e610c99",
+    "animal": "60d21b4667d0d8992e610c100",
+    "createdAt": "2023-07-22T00:00:00Z",
+    "note": "Polly is very talkative today.",
+    "comments": [
+      {
+        "commentText": "She seems happy.",
+        "commentAuthor": "Rick",
+        "createdAt": "2023-07-23T00:00:00Z"
+      }
+    ],
+    "tags": ["60d21b4667d0d8992e610c101"]
+  },
+  {
+    "username": "60d21b4667d0d8992e610c102",
+    "animal": "60d21b4667d0d8992e610c103",
+    "createdAt": "2023-08-30T00:00:00Z",
+    "note": "Sammy enjoys swimming a lot.",
+    "comments": [
+      {
+        "commentText": "We should build a larger pool.",
+        "commentAuthor": "Steve",
+        "createdAt": "2023-08-31T00:00:00Z"
+      }
+    ],
+    "tags": ["60d21b4667d0d8992e610c104"]
+  },
+  {
+    "username": "60d21b4667d0d8992e610c105",
+    "animal": "60d21b4667d0d8992e610c106",
+    "createdAt": "2023-09-15T00:00:00Z",
+    "note": "Daisy is very energetic.",
+    "comments": [
+      {
+        "commentText": "We need to provide more activities.",
+        "commentAuthor": "Nina",
+        "createdAt": "2023-09-16T00:00:00Z"
+      }
+    ],
+    "tags": ["60d21b4667d0d8992e610c107"]
+  },
+  {
+    "username": "60d21b4667d0d8992e610c108",
+    "animal": "60d21b4667d0d8992e610c109",
+    "createdAt": "2023-10-01T00:00:00Z",
+    "note": "Rocky prefers cooler climates.",
+    "comments": [
+      {
+        "commentText": "We need to adjust his habitat temperature.",
+        "commentAuthor": "Megan",
+        "createdAt": "2023-10-02T00:00:00Z"
+      }
+    ],
+    "tags": ["60d21b4667d0d8992e610c110"]
+  }
+]

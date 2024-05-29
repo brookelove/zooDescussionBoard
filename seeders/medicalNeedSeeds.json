@@ -1,0 +1,63 @@
+[
+    {
+      "type": "Allergy",
+      "details": "Allergic to bananas.",
+      "needsMedication": true,
+      "medication": ["Antihistamines"]
+    },
+    {
+      "type": "Injury",
+      "details": "Broken leg, recovering.",
+      "needsMedication": true,
+      "medication": ["Painkillers"]
+    },
+    {
+      "type": "Skin Condition",
+      "details": "Dermatitis, needs regular treatment.",
+      "needsMedication": true,
+      "medication": ["Topical creams"]
+    },
+    {
+      "type": "Heart Disease",
+      "details": "Requires monitoring and medication.",
+      "needsMedication": true,
+      "medication": ["Beta blockers"]
+    },
+    {
+      "type": "Diabetes",
+      "details": "Insulin dependent.",
+      "needsMedication": true,
+      "medication": ["Insulin"]
+    },
+    {
+      "type": "Respiratory Issue",
+      "details": "Asthma, needs inhaler.",
+      "needsMedication": true,
+      "medication": ["Inhaler"]
+    },
+    {
+      "type": "Obesity",
+      "details": "Requires diet control and exercise.",
+      "needsMedication": false,
+      "medication": []
+    },
+    {
+      "type": "Eye Condition",
+      "details": "Cataracts, needs surgery.",
+      "needsMedication": false,
+      "medication": []
+    },
+    {
+      "type": "Dental Issue",
+      "details": "Tooth decay, needs extraction.",
+      "needsMedication": true,
+      "medication": ["Painkillers"]
+    },
+    {
+      "type": "Parasite Infection",
+      "details": "Needs deworming.",
+      "needsMedication": true,
+      "medication": ["Deworming tablets"]
+    }
+  ]
+  
