@@ -29,7 +29,7 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
-  zooName: {
+  zoo_name: {
     type: Schema.Types.ObjectId,
     ref: "Zoo",
   },
@@ -44,12 +44,6 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  discussions: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Discussion",
-    },
-  ],
   friends: [
     {
       type: Schema.Types.ObjectId,

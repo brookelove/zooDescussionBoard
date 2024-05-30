@@ -11,6 +11,12 @@ const medicalNeedSchema = new Schema({
     required: true,
   },
   medication: [{ type: String }],
+  notes: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Notes",
+    },
+  ],
 });
 
 const MedicalNeeds = model("MedicalNeed", medicalNeedSchema);

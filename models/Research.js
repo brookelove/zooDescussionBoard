@@ -7,10 +7,14 @@ const researchSchema = new Schema({
     trim: true,
   },
   beginning_date: {
-    type: String,
+    type: Date,
+    default: Date.now,
+    get: (timestamp) => dateFormat(timestamp),
   },
   ending_date: {
-    type: String,
+    type: Date,
+    default: Date.now,
+    get: (timestamp) => dateFormat(timestamp),
   },
   authors: [
     {

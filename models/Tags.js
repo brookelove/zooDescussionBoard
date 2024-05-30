@@ -14,7 +14,11 @@ const tagSchema = new Schema(
       type: String,
       default: "#000000",
     },
-    createdAt: Date,
+    createdAt: {
+      type: Date,
+      default: Date.now,
+      get: (timestamp) => dateFormat(timestamp),
+    },
   },
   {
     toJSON: {

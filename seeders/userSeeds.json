@@ -6,10 +6,9 @@
     "role": "Researcher",
     "email": "alice@example.com",
     "phone_number": "123-456-7890",
-    "zooName": "60d21b4667d0d8992e610c121",
+    "zoo_name": "60d21b4667d0d8992e610c121",
     "research_projects": ["60d21b4667d0d8992e610c122"],
     "password": "password123",
-    "discussions": ["60d21b4667d0d8992e610c123"],
     "friends": ["60d21b4667d0d8992e610c124"]
   },
   {
@@ -19,10 +18,9 @@
     "role": "Caretaker",
     "email": "bob@example.com",
     "phone_number": "987-654-3210",
-    "zooName": "60d21b4667d0d8992e610c125",
+    "zoo_name": "60d21b4667d0d8992e610c125",
     "research_projects": ["60d21b4667d0d8992e610c126"],
     "password": "password123",
-    "discussions": ["60d21b4667d0d8992e610c127"],
     "friends": ["60d21b4667d0d8992e610c128"]
   },
   {
@@ -32,10 +30,9 @@
     "role": "Veterinarian",
     "email": "carol@example.com",
     "phone_number": "456-789-0123",
-    "zooName": "60d21b4667d0d8992e610c129",
+    "zoo_name": "60d21b4667d0d8992e610c129",
     "research_projects": ["60d21b4667d0d8992e610c130"],
     "password": "password123",
-    "discussions": ["60d21b4667d0d8992e610c131"],
     "friends": ["60d21b4667d0d8992e610c132"]
   },
   {
@@ -45,10 +42,9 @@
     "role": "Manager",
     "email": "david@example.com",
     "phone_number": "789-012-3456",
-    "zooName": "60d21b4667d0d8992e610c133",
+    "zoo_name": "60d21b4667d0d8992e610c133",
     "research_projects": ["60d21b4667d0d8992e610c134"],
     "password": "password123",
-    "discussions": ["60d21b4667d0d8992e610c135"],
     "friends": ["60d21b4667d0d8992e610c136"]
   },
   {
@@ -58,10 +54,9 @@
     "role": "Trainer",
     "email": "eve@example.com",
     "phone_number": "012-345-6789",
-    "zooName": "60d21b4667d0d8992e610c137",
+    "zoo_name": "60d21b4667d0d8992e610c137",
     "research_projects": ["60d21b4667d0d8992e610c138"],
     "password": "password123",
-    "discussions": ["60d21b4667d0d8992e610c139"],
     "friends": ["60d21b4667d0d8992e610c140"]
   },
   {
@@ -71,10 +66,9 @@
     "role": "Conservationist",
     "email": "frank@example.com",
     "phone_number": "345-678-9012",
-    "zooName": "60d21b4667d0d8992e610c141",
+    "zoo_name": "60d21b4667d0d8992e610c141",
     "research_projects": ["60d21b4667d0d8992e610c142"],
     "password": "password123",
-    "discussions": ["60d21b4667d0d8992e610c143"],
     "friends": ["60d21b4667d0d8992e610c144"]
   },
   {
@@ -84,10 +78,9 @@
     "role": "Biologist",
     "email": "grace@example.com",
     "phone_number": "678-901-2345",
-    "zooName": "60d21b4667d0d8992e610c145",
+    "zoo_name": "60d21b4667d0d8992e610c145",
     "research_projects": ["60d21b4667d0d8992e610c146"],
     "password": "password123",
-    "discussions": ["60d21b4667d0d8992e610c147"],
     "friends": ["60d21b4667d0d8992e610c148"]
   },
   {
@@ -97,10 +90,9 @@
     "role": "Zoologist",
     "email": "hank@example.com",
     "phone_number": "901-234-5678",
-    "zooName": "60d21b4667d0d8992e610c149",
+    "zoo_name": "60d21b4667d0d8992e610c149",
     "research_projects": ["60d21b4667d0d8992e610c150"],
     "password": "password123",
-    "discussions": ["60d21b4667d0d8992e610c151"],
     "friends": ["60d21b4667d0d8992e610c152"]
   },
   {
@@ -110,10 +102,9 @@
     "role": "Ecologist",
     "email": "ivy@example.com",
     "phone_number": "234-567-8901",
-    "zooName": "60d21b4667d0d8992e610c153",
+    "zoo_name": "60d21b4667d0d8992e610c153",
     "research_projects": ["60d21b4667d0d8992e610c154"],
     "password": "password123",
-    "discussions": ["60d21b4667d0d8992e610c155"],
     "friends": ["60d21b4667d0d8992e610c156"]
   },
   {
@@ -123,10 +114,9 @@
     "role": "Nutritionist",
     "email": "jack@example.com",
     "phone_number": "567-890-1234",
-    "zooName": "60d21b4667d0d8992e610c157",
+    "zoo_name": "60d21b4667d0d8992e610c157",
     "research_projects": ["60d21b4667d0d8992e610c158"],
     "password": "password123",
-    "discussions": ["60d21b4667d0d8992e610c159"],
     "friends": ["60d21b4667d0d8992e610c160"]
   }
 ]
