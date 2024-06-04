@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+const Notes = require("./Notes");
 
 const animalSchema = new Schema(
   {

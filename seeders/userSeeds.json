@@ -6,10 +6,10 @@
     "role": "Researcher",
     "email": "alice@example.com",
     "phone_number": "123-456-7890",
-    "zoo_name": "60d21b4667d0d8992e610c121",
-    "research_projects": ["60d21b4667d0d8992e610c122"],
+    "zoo_name": "",
+    "research_projects": [],
     "password": "password123",
-    "friends": ["60d21b4667d0d8992e610c124"]
+    "friends": []
   },
   {
     "name": "Bob Johnson",

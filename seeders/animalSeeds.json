@@ -3,7 +3,7 @@
     "name": "Leo",
     "photo": "leo.jpg",
     "age": "5 years",
-    "parents": ["Simba", "Nala"],
+    "parents": [],
     "research_projects": ["5f50c31b1c4ae23d78945e01"],
     "species": "Lion",
     "family": "Felidae",
@@ -15,13 +15,13 @@
     "offspring": [],
    "partner": [],
    "medicalNeeds": ["5f50c31b1c4ae23d78945f01"],
-    "notes": ["5f50c31b1c4ae23d78945g01"]
+    "notes": []
   },
   {
     "name": "Ellie",
     "photo": "ellie.jpg",
     "age": "8 years",
-    "parents": ["Dumbo", "Jumbo"],
+    "parents": [],
     "research_projects": ["5f50c31b1c4ae23d78945e02"],
     "species": "Elephant",
     "family": "Elephantidae",
@@ -33,14 +33,14 @@
     "offspring": [],
    " partner": [],
    "medicalNeeds": ["5f50c31b1c4ae23d78945f02"],
-    "notes": ["5f50c31b1c4ae23d78945g02"],
-    "tags": ["60d21b4667d0d8992e610c100"]
+    "notes": [],
+    "tags": []
   },
   {
     "name": "Tina",
     "photo": "tina.jpg",
     "age": "3 years",
-    "parents": ["Max", "Molly"],
+    "parents": [],
     "research_projects": ["5f50c31b1c4ae23d78945e03"],
     "species": "Tiger",
     "family": "Felidae",
@@ -52,14 +52,14 @@
     "offspring": [],
    " partner": [],
    "medicalNeeds": ["5f50c31b1c4ae23d78945f03"],
-    "notes": ["5f50c31b1c4ae23d78945g03"],
-    "tags": ["60d21b4667d0d8992e610c101"]
+    "notes": [],
+    "tags": []
   },
   {
     "name": "Polly",
     "photo": "polly.jpg",
     "age": "2 years",
-    "parents": ["Jack", "Jill"],
+    "parents": [],
     "research_projects": ["5f50c31b1c4ae23d78945e04"],
     "species": "Parrot",
     "family": "Psittacidae",
@@ -71,14 +71,14 @@
     "offspring": [],
    " partner": [],
    "medicalNeeds": ["5f50c31b1c4ae23d78945f04"],
-    "notes": ["5f50c31b1c4ae23d78945g04"],
-    "tags": ["60d21b4667d0d8992e610c102"]
+    "notes": [],
+    "tags": []
   },
   {
     "name": "Benny",
     "photo": "benny.jpg",
     "age": "6 years",
-    "parents": ["Sam", "Sally"],
+    "parents": [],
     "research_projects": ["5f50c31b1c4ae23d78945e05"],
     "species": "Bear",
     "family": "Ursidae",
@@ -90,14 +90,14 @@
     "offspring": [],
    " partner": [],
    "medicalNeeds": ["5f50c31b1c4ae23d78945f05"],
-    "notes": ["5f50c31b1c4ae23d78945g05"],
-    "tags": ["60d21b4667d0d8992e610c103"]
+    "notes": [],
+    "tags": []
   },
   {
     "name": "Molly",
     "photo": "molly.jpg",
     "age": "4 years",
-    "parents": ["Tom", "Jerry"],
+    "parents": [],
     "research_projects": ["5f50c31b1c4ae23d78945e06"],
     "species": "Monkey",
     "family": "Cercopithecidae",
@@ -109,14 +109,14 @@
     "offspring": [],
    " partner": [],
    "medicalNeeds": ["5f50c31b1c4ae23d78945f06"],
-    "notes": ["5f50c31b1c4ae23d78945g06"],
+    "notes": [],
     "tags": []
   },
   {
     "name": "Oscar",
     "photo": "oscar.jpg",
     "age": "7 years",
-    "parents": ["Peter", "Pam"],
+    "parents": [],
     "research_projects": ["5f50c31b1c4ae23d78945e07"],
     "species": "Otter",
     "family": "Mustelidae",
@@ -128,14 +128,14 @@
     "offspring": [],
    " partner": [],
    "medicalNeeds": ["5f50c31b1c4ae23d78945f07"],
-    "notes": ["5f50c31b1c4ae23d78945g07"],
-    "tags": ["60d21b4667d0d8992e610c103"]
+    "notes": [],
+    "tags": []
   },
   {
     "name": "Gina",
     "photo": "gina.jpg",
     "age": "9 years",
-    "parents": ["George", "Grace"],
+    "parents": [],
     "research_projects": ["5f50c31b1c4ae23d78945e08"],
     "species": "Giraffe",
     "family": "Giraffidae",
@@ -147,14 +147,14 @@
     "offspring": [],
    " partner": [],
    "medicalNeeds": ["5f50c31b1c4ae23d78945f08"],
-    "notes": ["5f50c31b1c4ae23d78945g08"],
-    "tags": ["60d21b4667d0d8992e610c104"]
+    "notes": [],
+    "tags": []
   },
   {
     "name": "Fred",
     "photo": "fred.jpg",
     "age": "10 years",
-    "parents": ["Harry", "Helen"],
+    "parents": [],
     "research_projects": ["5f50c31b1c4ae23d78945e09"],
     "species": "Frog",
     "family": "Ranidae",
@@ -166,14 +166,14 @@
     "offspring": [],
    " partner": [],
    "medicalNeeds": ["5f50c31b1c4ae23d78945f09"],
-    "notes": ["5f50c31b1c4ae23d78945g09"],
-    "tags": ["60d21b4667d0d8992e610c105"]
+    "notes": [],
+    "tags": []
   },
   {
     "name": "Lola",
     "photo": "lola.jpg",
     "age": "1 year",
-    "parents": ["Leo", "Luna"],
+    "parents": [],
     "research_projects": ["5f50c31b1c4ae23d78945e10"],
     "species": "Leopard",
     "family": "Felidae",
@@ -185,6 +185,6 @@
     "offspring": [],
    " partner": [],
    "medicalNeeds": ["5f50c31b1c4ae23d78945f10"],
-    "notes": ["5f50c31b1c4ae23d78945g10"]
+    "notes": []
   }
 ]

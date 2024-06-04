@@ -7,17 +7,20 @@ const {
   User,
   Zoo,
 } = require("../models");
-const Notes = require("../models/Notes");
 const { signToken, AuthenticationError } = require("../utils/auth");
 
 const resolvers = {
   Query: {
     //Animal
     animals: async () => {
-      return Animal.find().populate("notes");
+      return await Animal.find()
+        .populate("notes")
+        .populate("zooName")
+        .populate("tags")
+        .populate("medicalneeds");
     },
     animal: async (_, { name }) => {
-      return Animal.findOne({ name }).populate("notes");
+      return Animal.findOne({ name }).populate("notes").populate("zooName");
     },
 
     //Medical Needs =======

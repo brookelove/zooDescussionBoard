@@ -1,7 +1,7 @@
 const typeDefs = `
 type Auth {
     token: ID!
-    keeper: Keeper
+    user: User
 }
 
 type Animal{
@@ -34,7 +34,7 @@ type Notes{
     _id: ID
     username:User
     animal:Animal
-    createdAt: Date
+    createdAt: String
     note: String
     comments: [String]
     tags: [Tags]
@@ -50,8 +50,8 @@ type Comment {
 type Research {
     _id: ID
     name:User
-    beginning_date: Date
-    ending_date: Date
+    beginning_date: String
+    ending_date: String
     authors: [User]
     animals: [Animal]
     awards: [String!]
@@ -61,7 +61,7 @@ type User{
     _id: ID
     name: String
     personal_id: String
-    photo:: String
+    photo: String
     role: String
     email: String
     phone_number: String
@@ -69,7 +69,6 @@ type User{
     research_projects:[Research]
     password: String
     friends: [User]
-    friends: [Keeper]
 }
 
 type Tags {
@@ -77,14 +76,14 @@ type Tags {
     tagName: String
     backgroundColor: String
     color: String
-    createdAt: Date
+    createdAt: String
 }
 
 type Zoo{
     _id: ID
     name: String
     location: String
-    keepers: [Keeper]
+    users: [User]
     animals: [Animal]
 }
 type Query {
@@ -96,8 +95,8 @@ type Query {
     note(noteId: ID!): Notes
     researches(username: String): [Research!]!
     research(researchId: ID!): Research
-    tags: [Tag!]!
-    tag(name: String!): Tag
+    tags: [Tags!]!
+    tag(name: String!): Tags
     users: [User!]!
     user(username: String!): User
     me: User
@@ -148,7 +147,7 @@ type Mutation {
     updateResearch(_id: ID!, title: String, content: String): Research
     removeResearch(researchId: ID!): Research
 
-    addTag(tagName: String!, backgroundColor: String, color: String): Tag
+    addTag(tagName: String!, backgroundColor: String, color: String): Tags
 
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth

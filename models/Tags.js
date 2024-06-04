@@ -1,10 +1,10 @@
 const { Schema, model } = require("mongoose");
+const dateFormat = require("../utils/dateFormat");
 
 const tagSchema = new Schema(
   {
     tagName: {
       type: String,
-      required: true,
     },
     backgroundColor: {
       type: String,
